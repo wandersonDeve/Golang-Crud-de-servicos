@@ -1,0 +1,36 @@
+{{define "Update"}} {{template "_head"}} {{template "_nav"}}
+<body>
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-5">Edição serviço</h1>
+        <p class="lead">Insira os detalhes</p>
+      </div>
+    </div>
+    <form method="POST" action="update">
+        <input type="hidden" name="id" value="{{.Id}}">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <label for="serviceName">Nome do Serviço:</label>
+            <input type="text" name="serviceName" class="form-control" value="{{.ServiceName}}"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <label for="url">Url:</label>
+            <input type="text" name="url" class="form-control" value="{{.Url}}"/>
+          </div>
+        </div>
+      </div>
+      <button type="submit" value="salvar" class="btn btn-success">
+        Atualizar
+      </button>
+      <a class="btn btn-info" href="/">Voltar</a>
+    </form>
+  </div>
+</body>
+
+{{end}}
